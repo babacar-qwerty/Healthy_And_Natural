@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="home">
+<h1>Accueil</h1>
+    <!-- Première partie de la section acceuil -->
+    <div class="home-header">
+        <h2 >Healthy<span class="and">&</span>Natural</h2>
+        <p>Produits 100% naturels et bios </p>
+        <p>pour votre santé et votre bien-être au quotidien.</p>
+
+        <!-- les deux boutons -->
+        <div class="home-button">
+            <a href="{{url_for('cosmetique')}}">
+                <button class="home-cosmetique" href >Nos cosmétiques</button>
+            </a>
+            <a href="{{url_for('alimentaire')}}">
+                <button class="home-alimentaire"> Nos produits alimentaires</button>
+            </a>
+        </div>    
+    </div>
+
+    <!-- section home/Cosmétique -->
+    <div class="home-cosmetique-container">
+        <h1>Cosmétiques Naturels</h1>
+        <p>Prenez soin de vous naturellement</p>
+            <div class="img-container">
+
+                <div class="img1">
+                <img class="img" src="{{url_for('static', filename='images/Crème_karité.jpeg')}}">
+                <h3>Crème de karité</h3>
+                <h5>Crème naturelle au beurre de karité pour hydrater et nourrir la peau en profondeur</h5>
+                </div>
+
+                <div class="img2">
+                <img class="img" src="{{url_for('static', filename='images/H&N-Serum_capillaire.png')}}">
+                <h3>Sérum capillaire</h3>
+                <h5>Mélange d'huiles naturelles pour fortifier et faire briller vos cheveux</h5>
+                </div>
+
+                <div class="img3">
+                <img class="img" src="{{url_for('static', filename='images/Karité.jpg')}}">
+                <h3>Beurre</h3>
+                <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, eius!</h5>
+                </div>
+            </div>
+    </div>
+
+
+     <!-- section Home/alimentaire -->
+      <div class="home-alimentaire-container">
+        <h1>Alimentaires Naturels</h1>
+        <p>Saveurs naturelles et authentiques</p>
+        <div class="img-container">
+            <div class="img1">
+            <img src="{{url_for('static', filename='images/poudre_dattes.jpeg')}}" alt="" class="img">
+            <h3>Poudre de dattes</h3>
+            <h5>Poudre de datte pure et naturelle, riche en fibres et en sucres naturels pour sucrer sainement vos recettes.</h5>
+        </div>
+
+                <div class="img2">
+            <img src="{{url_for('static', filename='images/poudre_bissap.jpeg')}}" alt="" class="img">
+            <h3>Bissap instantané</h3>
+            <h5>Poudre de bissap instantanée 100% naturelle, riche en vitamine C pour une boisson rafraîchissante prête en quelques secondes.</h5>
+        </div>
+
+                <div class="img3">
+            <img src="{{url_for('static', filename='images/miel_citronné.jpeg')}}" alt="" class="img">
+            <h3>Miel citronné</h3>
+            <h5>Miel pur infusé au citron naturel, alliant douceur et acidité pour booster votre immunité au quotidien.</h5>
+        </div>
+      </div>
+        </div>
+    
+        <!-- section  Pourquoi nous choisir?-->
+        <div class="pourquoi-container">
+            <h2>Pourquoi Choisir Healthy & Natural ?</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="cercle">🌿</div>
+                        <h3>100% Naturel</h3>
+                        <p>Tous nos produits sont fabriqués à partir d'ingrédients naturels et bio, sans compromis sur la qualité</p>
+                </div>
+
+                <div class="card">
+                    <div class="cercle">✓</div>
+                        <h3>Sans Additifs</h3>
+                        <p>Aucun conservateur, colorant ou produit chimique ajouté. Juste la pureté de la nature</p>
+                </div>
+
+                <div class="card">
+                    <div class="cercle">💎</div>
+                        <h3>Qualité Premium</h3>
+                        <p>Sélection rigoureuse des matières premières pour garantir votre bien-être et votre satisfaction</p>
+                </div>
+
+        </div>
+</div>
+
+    <!-- HOME/ À propos de nous -->
+    <div class="histoire-container">
+        <h2>Découvrez Notre Histoire</h2>
+        <p>Apprenez-en plus sur notre passion pour les produits naturels et notre engagement pour votre bien-être</p>
+        <a href="{{url_for('info')}}">
+            <button class="histoire-btn">En savoir plus →</button>
+        </a>
+    </div>
+
+</section>
+{% endblock %}

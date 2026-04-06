@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section id="contact">
+    <h1>Contactez-Nous !</h1>
+    <h3>Une question, une commande ou simplement envie d'en savoir plus ? Nous sommes là pour vous !</h3>
+
+    <div class="contact">
+        <!--        Nos réseaux         -->
+        <div class="reseaux">
+            <h2 id="nos-reseaux">Nos Réseaux:</h2>
+
+            <h4>WhatsApp: 
+                <ul>
+                    <li>
+                        <a href="https://wa.me/22373152199" target="_blank">+223 73152199</a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/221710136758" target="_blank">+221 710136758</a>
+                    </li>
+                </ul>
+
+            </h4>
+
+            <h4>Instagram: 
+                <a href="https://www.instagram.com/toncompte" target="_blank">Instagram</a>
+            </h4>
+
+            <h4>Snapchat: 
+                <a href="https://www.snapchat.com/add/toncompte" target="_blank">Snapchat</a>
+            </h4>
+
+            <h4>Facebook: <a href="https://www.facebook.com/share/1Bvnip27Ta/?mibextid=wwXIfr">Healthy & Natural</a></h4>
+
+            <h4>Email: <a href="mailto:healthy&natural@gmail.com">healthy&natural@gmail.com</a></h4>
+            
+        </div>
+        
+        <!--        Formulaire       -->
+        <form id="form" action="" method="post">
+            <div class="form-group">
+                <label for="nom">Nom complet</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Téléphone / WhatsApp</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="+221 XX XXX XX XX">
+            </div>
+
+            <div class="form-group">
+                <label for="sujet">Sujet</label>
+                <select id="sujet" name="sujet">
+                    <option value="">-- Choisissez --</option>
+                    <option value="commande">Passer une commande</option>
+                    <option value="info">Demande d'information</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..."></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="alimentaire">
+    <h1>Nos Produits Alimentaires</h1>
+    <p>Des saveurs naturelles et authentiques pour une alimentation saine et gourmande</p>  
+
+    <!--        NOS PRODUITS        -->
+    <div id="produits-alimentaires">
+<!-- ON INVERSE LES DEUX DIVS SUCCESSIVEMENTS POUR VARIER LA DISPOSITION IMG-TEXTE -->
+
+        <!-- POUDRE DE BISSAP -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-img">
+                <img class="img"  src="{{url_for('static',filename='images/poudre_bissap.jpeg')}}" alt="">
+            </div>
+            <div class="alimentaire-text">
+                <h2>Bissap instantané</h2>
+                <p>Notre poudre de bissap est fabriquée à partir de fleurs d'hibiscus 100% naturelles, soigneusement séchées et réduites en poudre pour vous offrir toute la saveur du bissap traditionnel en un minimum de temps. Fini les longues heures de cuisson — il suffit de dissoudre la poudre dans de l'eau chaude, de filtrer et votre boisson est prête. Riche en vitamine C et aux propriétés antioxydantes, le bissap est bien plus qu'une simple boisson rafraîchissante. C'est un allié naturel pour votre santé au quotidien, à déguster chaud ou froid selon vos envies.
+                </p>
+            </div>
+        </div>
+
+        <!--        MIEL CITRONNÉ       -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-text">
+                <h2>Miel Citronné</h2>
+                <p>Notre miel citronné est préparé à partir de rondelles de citron frais, lentement confites dans un miel pur et naturel. Cette association unique allie la douceur du miel aux bienfaits du citron pour créer un produit aussi savoureux que bénéfique pour la santé.
+                Excellente alternative au sucre raffiné, il est particulièrement adapté aux personnes qui surveillent leur glycémie ou qui souhaitent adopter une alimentation plus saine. Riche en vitamine C et aux propriétés antibactériennes, une simple cuillère le matin dans de l'eau tiède suffit pour bien démarrer la journée.</p>
+            </div>
+            <div class="alimentaire-img">
+                <img class="img" src="{{url_for('static',filename='images/miel_citronné.jpeg')}}" alt="">
+            </div>
+        </div>
+
+        <!--    POUDRE DE DATTES         -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-img">
+                <img class="img" src="{{url_for('static',filename='images/poudre_dattes.jpeg')}}" alt="">
+            </div>
+            <div class="alimentaire-text">
+                <h2>Poudre de Dattes</h2>
+                <p>Notre poudre de dattes est obtenue à partir de dattes 100% naturelles, séchées et finement broyées pour vous offrir un substitut au sucre savoureux et nutritif.
+                Riche en fibres, en potassium et en magnésium, elle apporte une énergie durable sans les pics de glycémie du sucre blanc. Son index glycémique plus bas en fait une alternative idéale pour les personnes diabétiques ou soucieuses de leur santé.
+                Utilisez-la pour sucrer vos tisanes ou vos desserts — même goût sucré, mais avec tous les bienfaits de la nature.</p>
+            </div>
+        </div>
+
+        <!--        Nokoss       -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-text">
+                <h2>Nokoss</h2>
+                <p>Notre poudre de nokoss est préparée à partir d'un mélange traditionnel d'ail, de persil et d'épices naturelles, soigneusement séché pour préserver tous ses arômes et saveurs.
+                Pratique et rapide, il suffit d'y ajouter un peu d'eau chaude pour retrouver instantanément la texture et le goût d'un nokoss frais fait maison. Contrairement aux cubes industriels bourrés d'additifs, notre nokoss est 100% naturel et sans conservateurs — pour assaisonner vos plats en toute conscience.
+                Idéal pour le thiéboudienne, le yassa ou tout autre plat qui mérite le meilleur assaisonnement.
+                </p>
+            </div>
+            <div class="alimentaire-img">
+                <img class="img" src="{{url_for('static',filename='images/nokoss.jpeg')}}" alt="">
+            </div>
+        </div>
+
+
+    </div>
+</section>
+{% endblock %}

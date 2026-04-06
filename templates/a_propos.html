@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="a-propos">
+<h1 id="our-history">À propos de nous</h1>
+<h3>Une passion pour la nature, un engagement pour votre bien-être</h3>
+
+<!-- Notre histoire -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-text">
+                <h2>Notre Histoire</h2>
+                <p>
+                    Healthy & Natural, c'est avant tout l'histoire de Mame Coumba Sene Dieng, une femme passionnée par le bio et le naturel. Petit à petit, une simple idée est devenue une aventure. Dans une pièce aménagée en laboratoire, avec des mixeurs et séchoirs, elle a commencé à transformer les fruits et légumes du marché en épices, poudres, confits, pickles, confitures et thés naturels.
+                </p>
+            </div>
+            <div class="alimentaire-img">
+                <img class="img maman" src="{{url_for('static',filename='images/maman_vert.jpeg')}}" alt="">
+            </div>
+        </div>
+
+        <!-- Notre engagement pour le naturel -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-text">
+                <h2>Notre engagement pour le naturel</h2>
+                <p>
+                    Depuis toujours, Mame Coumba fuit les produits industriels, consciente de leurs effets néfastes sur la santé. Frustrée de devoir chercher ses produits bio chez les locaux ou à l'étranger, elle s'est posé une question simple : "Et si je le faisais moi-même ?" Chaque création respecte depuis un principe fondamental : 100 % bio, sans conservateurs chimiques, sans compromis sur la qualité.
+                </p>
+            </div>
+            <div class="alimentaire-img">
+                <img class="img" src="{{url_for('static',filename='images/nature2.jpeg')}}" alt="">
+            </div>
+        </div>
+
+        <!-- Une marque qui voyage -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-text">
+                <h2>Une marque qui voyage</h2>
+                <p>
+                    Ses créations ont rapidement trouvé leur public. Elle a élargi ses produits à la cosmétique : crèmes, savons et huiles capillaires à base de karité et de cacao. Aujourd'hui ses produits voyagent du Sénégal jusqu'au Canada, à l'Australie et à la France. Healthy & Natural, c'est la preuve qu'avec passion, créativité et patience, on peut transformer une idée simple en projet qui respecte la nature et le bien-être des gens.
+                </p>
+            </div>
+            <div class="alimentaire-img">
+                <img class="img" src="{{url_for('static',filename='images/international.jpeg')}}" alt="">
+            </div>
+        </div>
+</section>
+{% endblock %}

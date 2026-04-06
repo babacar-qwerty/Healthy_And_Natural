@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Pour cette section je vais mettre les mêmes classes que la section alimentaire Vu qu'ils sont quasi pareils (.alimentaire-container, .alimentaire-text, .alimentaire-img et .img) -->
+<h1>Cosmétique</h1>
+
+        <!--        CRÈME DE KARITÉ         -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-text">
+                <h2>Karité</h2>
+                <p>Notre beurre de karité est obtenu à partir de noix de karité 100% naturelles, enrichi d'un mélange d'huiles précieuses pour décupler ses bienfaits. Sans odeur et sans additifs, il convient aussi bien aux soins de la peau qu'aux cheveux.
+                Profondément nourrissant, il forme un voile protecteur qui hydrate en profondeur et résiste même après les ablutions — idéal en période de froid où la peau a besoin d'une protection supplémentaire contre le dessèchement.
+                Polyvalent et naturel, il remplace à lui seul crèmes, baumes et masques capillaires du commerce. Un soin complet, pur et authentique pour toute la famille.</p>
+            </div>
+            <div class="alimentaire-img">
+                <img class="img" src="{{url_for('static',filename='images/Crème_karité.jpeg')}}" alt="">
+            </div>
+        </div>
+        <!--        SERUM CAPILLAIRE         -->
+        <div class="alimentaire-container">
+            <div class="alimentaire-img">
+                <img class="img" src="{{url_for('static',filename='images/H&N-Serum_capillaire.png')}}" alt="">
+            </div>
+            <div class="alimentaire-text">
+                <h2>Serum Capillaire</h2>
+                <p>Notre sérum capillaire est un mélange soigneusement élaboré d'huiles végétales et de plantes aux vertus reconnues. Il associe les huiles de coco, d'avocat, de ricin et de chébé à un concentré de plantes naturelles — aloe vera, gingembre, goyave, menthe et clou de girofle — pour offrir à vos cheveux un soin complet et puissant.
+                Chaque ingrédient a été choisi pour ses propriétés spécifiques : l'huile de ricin et le chébé favorisent la pousse et renforcent les cheveux, l'aloe vera hydrate et apaise le cuir chevelu, tandis que le gingembre et le clou de girofle stimulent la circulation sanguine pour des cheveux plus forts et plus denses.
+                Le résultat : des cheveux nourris, brillants et en pleine santé — sans silicones, sans parabènes, juste la puissance de la nature.</p>
+            </div>
+        </div>
+{% endblock %}

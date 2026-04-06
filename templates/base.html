@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy & Natural</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/LOGO.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <!-- PARTIE GAUCHE / LOGO -->
+        <div class="nav-logo">
+            <a href="{{url_for('home')}}"><img src=" {{url_for('static', filename= 'images/LOGO.png')}}" alt="logo" class="logo-img"></a>
+            <a href="{{url_for('home')}}" class="title">Healthy <span class="and">& </span>Natural</a>
+        </div>
+        <!-- MENU HAMBURGER -->
+            <button id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        <!-- LIENS DE NAV -->
+        <div class="links-container">
+            <ul id="nav-links">
+                <li>
+                    <a class="link" href="{{url_for('home')}}">Acceuil</a>
+                </li>
+                <li>
+                    <a class="link" href="{{url_for('info')}}">À propos</a>
+                </li>
+                <li>
+                    <a class="link" href="{{url_for('alimentaire')}}">Alimentaire</a>
+                </li>
+                <li>
+                    <a class="link" href="{{url_for('cosmetique')}}">Cosmétiques</a>
+                </li>
+                <li>
+                    <a class="link" href="{{url_for('recettes')}}">Recettes et astuces</a>
+                </li>
+                <li>
+                    <a class="link" href="{{url_for('contact')}}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+
+        <!-- FOOTER / CONTACTS -->
+    <footer >
+
+        <!-- PARTIE GAUCHE DU FOOTER -->
+        <div class="f-left">
+            <h2>Healthy & Natural</h2>
+            <p>Produits 100% naturels et bios </p>
+            <p>pour votre santé et votre bien-être au quotidien.</p>
+        </div>
+
+
+        <!-- MILIEU DU FOOTER -->
+        <div class="f-middle">
+            <h2>Navigation</h2>
+            <div class="f-links-container">
+                <ul id="footer-links">
+                    <li>
+                        <a class="f-link" href="{{url_for('home')}}">Acceuil</a>
+                    </li>
+                    <li>
+                        <a class="f-link" href="{{url_for('info')}}">À propos</a>
+                    </li>
+                    <li>
+                        <a class="f-link" href="{{url_for('alimentaire')}}">Alimentaire</a>
+                    </li>
+                    <li>
+                        <a class="f-link" href="{{url_for('cosmetique')}}">Cosmétiques</a>
+                    </li>
+                    <li>
+                        <a class="f-link" href="{{url_for('recettes')}}">Recettes et astuces</a>
+                    </li>
+                    <li>
+                        <a class="f-link" href="{{url_for('contact')}}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- PARTIE DROITE DU FOOTER -->
+        <div class="f-right">
+            <h2>Nos engagments</h2>
+            <ul class="f-engagements">
+                <li>✓ 100% Naturel et Bio</li>
+                <li>✓ Sans Conservateurs</li>
+                <li>✓ Sans Additifs Chimiques</li>
+                <li>✓ Qualité Premium</li>
+                <li>✓ Commerce Équitable</li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
