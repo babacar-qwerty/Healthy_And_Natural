@@ -682,6 +682,20 @@ footer h2{
 
 }
 
+/* iphone 12 */
+@media (max-width: 391px){
+    #home h1{
+        margin-top: 20px;
+        font-size: 1.4rem;
+    }
+
+    /* NAVLINKS */
+        .link{
+        font-size: 0.45rem;
+    }
+
+}
+
 /* Mobile M (téléphones moyens ex: iPhone 12) */
 @media (max-width: 375px) { 
     /* NAVBAR */
