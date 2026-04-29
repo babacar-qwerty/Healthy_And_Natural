@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request
 
 app = Flask(__name__)
 
@@ -22,9 +22,17 @@ def cosmetique():
 def recettes():
     return render_template('recettes.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET','POST'])
 def contact():
-    return render_template('contact.html')
+    if request.method == 'POST':
+        nom = request.form.get('nom')
+        email = request.form.get('email')
+        telephone = request.form.get('telephone')
+        sujet = request.form.get('sujet')
+        message = request.form.get('message')
+        return f"Merci {nom} pour votre message !"
+    else:
+        return render_template('contact.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
