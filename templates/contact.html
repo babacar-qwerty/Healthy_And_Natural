@@ -4,6 +4,11 @@
 <section id="contact">
     <h1>Contactez-Nous !</h1>
     <h3>Une question, une commande ou simplement envie d'en savoir plus ? Nous sommes là pour vous !</h3>
+    {% if success %}
+        <div class="form-success">
+            Votre message a bien été envoyé !
+        </div>
+    {% endif %}
 
     <div class="contact">
         <!--        Nos réseaux         -->
@@ -37,6 +42,7 @@
         </div>
         
         <!--        Formulaire       -->
+
         <form id="form" action="{{url_for('contact')}}" method="post">
             <div class="form-group">
                 <label for="nom">Nom complet</label>
@@ -70,6 +76,7 @@
 
             <button type="submit" class="contact-btn">Envoyer</button>
         </form>
+
     </div>
 </section>
 

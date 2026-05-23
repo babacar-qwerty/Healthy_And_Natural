@@ -1,6 +1,18 @@
 from flask import Flask,render_template, request
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
+
+# CONFIGURATIONS DU SERVEUR MAIL:
+app.config['MAIL_SERVER']= 'smtp.gmail.com'
+app.config['MAIL_PORT']= 587
+app.config['MAIL_USE_TLS']= True
+app.config['MAIL_USERNAME']= 'healthyandnatural221@gmail.com'
+app.config['MAIL_PASSWORD']= 'ncub yqns lbzc oqmf'
+
+mail = Mail(app)
+
+
 
 @app.route('/')
 def home():
@@ -30,7 +42,20 @@ def contact():
         telephone = request.form.get('telephone')
         sujet = request.form.get('sujet')
         message = request.form.get('message')
-        return f"Merci {nom} pour votre message !"
+
+        # Création et envoi de l'email
+        msg = Message(
+            subject= f"Nouveau message de {nom}-{sujet}",
+            sender= 'healthyandnatural221@gmail.com',recipients= ['healthyandnatural221@gmail.com']     
+        )
+        msg.body= f"""
+                Nom: {nom}
+                Téléphone: {telephone}
+                Email: {email}
+                Objet: {sujet}
+                Message: {message}"""
+        mail.send(msg)
+        return render_template('contact.html', success=True)
     else:
         return render_template('contact.html')
 
